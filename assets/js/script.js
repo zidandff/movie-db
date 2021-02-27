@@ -91,15 +91,23 @@ function updateUI(movies){
     containerMovies.innerHTML = cards
 }
 
+
 function loadingDetail(){
     const modalDetail = document.querySelector(".modal-body")
-    let loader = `<h1>Bentar nyet...</h1>`
-    modalDetail.innerHTML = loader
+    modalDetail.innerHTML = `<div class="loading-circle">
+    <div>
+      <div></div>
+    </div>`
 }
 
 function loadingSearch(){
     const containerMovies = document.querySelector(".movies-container")
-    containerMovies.innerHTML = `<h1>Sabar Nyet...</h1>`
+    containerMovies.innerHTML = `<div>
+        <div class="loading-circle">
+        <div>
+            <div></div>
+        </div>
+    </div`
 }
 
 function errorMessage(errorM){
