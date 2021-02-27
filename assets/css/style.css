@@ -1,0 +1,47 @@
+.card {
+    height: 100%;
+}
+.card img {
+    height: 400px;
+    object-fit: cover;
+    background-image: url(movies.svg);
+}
+
+.link-trailer {
+    display: none;
+}
+
+.loading-circle {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-circle div {
+    border-radius: 50%;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 8px solid transparent;
+    border-right-color: #3131dd;
+    border-left-color: #3131dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    animation: 3s spin linear infinite;
+}
+
+.loading-circle div div {
+    border-right-color: #000094;
+    border-left-color: #000094;
+}
+
+@keyframes spin{
+    100% {
+        transform: rotateZ(360deg) scale(1);
+    }
+}
