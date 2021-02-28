@@ -4,7 +4,7 @@
 .card img {
     height: 400px;
     object-fit: cover;
-    background-image: url(movies.svg);
+    background-image: url(/fetch/assets/img/movies.svg);
 }
 
 .link-trailer {

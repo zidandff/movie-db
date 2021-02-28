@@ -40,7 +40,7 @@ document.addEventListener("click", async function(e){
 }) 
 
 function getMovies(keyword){
-    return fetch(`http://www.omdbapi.com/?apikey=19e7f0f7&s=${keyword}`)
+    return fetch(`https://www.omdbapi.com/?apikey=19e7f0f7&s=${keyword}`)
             .then( response => {
                 if(keyword == "" ){
                     throw new Error("Please insert the keyword first")
@@ -59,7 +59,7 @@ function getMovies(keyword){
 }
 
 function getMoviesDetail(imdbid){
-    return fetch(`http://www.omdbapi.com/?apikey=19e7f0f7&i=${imdbid}`)
+    return fetch(`https://www.omdbapi.com/?apikey=19e7f0f7&i=${imdbid}`)
                         .then( response => response.json() )
                         .then( response => response )
 }
