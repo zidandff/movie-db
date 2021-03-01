@@ -91,7 +91,6 @@ function updateUI(movies){
     containerMovies.innerHTML = cards
 }
 
-
 function loadingDetail(){
     const modalDetail = document.querySelector(".modal-body")
     modalDetail.innerHTML = `<div class="loading-circle">
@@ -117,18 +116,20 @@ function errorMessage(errorM){
 }
 
 function cardComp( {Title, Year, imdbID, Poster} ){
-    return `<div class="col-lg-3 col-md-4 col-6 my-3 align-self-stretch">
-        <div class="card">
-        <img src="${Poster}" class="card-img-top ">
-        <div class="card-body d-flex flex-column justify-content-between">
-            <div>
-                <h5 class="card-title">${Title}</h5>
-                <h6 class="card-subtitle text-muted mb-3">${Year}</h6>
-            </div>
-            <button class="btn btn-primary modal-btn align-self-start" data-bs-toggle="modal" data-bs-target="#movieDetail" data-imdbid="${imdbID}">See Detail</button>
+    return `<div class="col-lg-3 col-md-4 col-6 my-3 ">
+    <div class="card">
+      <div class="poster">
+        <img src="${Poster}" class="">
+      </div>
+    <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+            <h5 class="card-title">${Title}</h5>
+            <h6 class="card-subtitle text-muted mb-3">${Year}</h6>
         </div>
-        </div>
-    </div>`
+        <button class="btn btn-primary modal-btn align-self-start" data-bs-toggle="modal" data-bs-target="#movieDetail" data-imdbid="${imdbID}">See Detail</button>
+    </div>
+    </div>
+</div>`
 }
 
 function modalComp( {Poster, Title, Year, Director, Actors, Writer, Plot} ){
